@@ -19,12 +19,15 @@ class ArticleCard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
-          width: 338,
-          child: Text(
-            text,
-            textAlign: TextAlign.center,
-            style: AppTypography.v.s26.w400.black51,
+        ConstrainedBox(
+          constraints: BoxConstraints(minHeight: 210),
+          child: SizedBox(
+            width: 338,
+            child: Text(
+              text,
+              textAlign: TextAlign.center,
+              style: AppTypography.v.s26.w400.black51,
+            ),
           ),
         ),
         const SizedBox(height: 24),
