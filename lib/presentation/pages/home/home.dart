@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:web_lab/gen/assets.gen.dart';
 import 'package:web_lab/presentation/pages/home/widgets/article.dart';
-import 'package:web_lab/presentation/pages/home/widgets/mail_input_form.dart';
 import 'package:web_lab/presentation/pages/home/widgets/our_team.dart';
 import 'package:web_lab/presentation/styles/colors.dart';
 import 'package:web_lab/presentation/styles/typography.dart';
-import 'package:web_lab/presentation/widgets/app_outlined_button.dart';
 
+import 'widgets/footer.dart';
 import 'widgets/get_in_touch.dart';
 import 'widgets/header.dart';
 import 'widgets/home_app_bar.dart';
@@ -47,31 +45,7 @@ class HomePage extends StatelessWidget {
                   const OurTeam(),
                   const Article(),
                   const LetsGetInTouch(),
-                  ColoredBox(
-                    color: AppColors.black0,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        const SizedBox(height: 69),
-                        MailInputForm(),
-                        const SizedBox(height: 21.95),
-                        AppOutlinedButton(
-                          text: 'Send message',
-                          onTap: () {},
-                          borderColor: AppColors.green,
-                          textStyle: AppTypography.v.italic.s16.green,
-                        ),
-                        const SizedBox(height: 37.5),
-                        Assets.images.logoWhite.image(),
-                        const SizedBox(height: 14),
-                        Text(
-                          'Minimal Template made in Webflow. All rights reserved.',
-                          style: AppTypography.v.s14.w400.textTransGrey,
-                        ),
-                        const SizedBox(height: 75),
-                      ],
-                    ),
-                  ),
+                  const Footer(),
                 ],
               ),
             ),
