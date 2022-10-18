@@ -25,6 +25,7 @@ class LetsGetInTouch extends StatelessWidget {
                 : MediaQuery.of(context).size.width > 510
                     ? 924
                     : 1270,
+            width: double.infinity,
             child: Assets.images.bg2.image(
               fit: BoxFit.cover,
             ),
